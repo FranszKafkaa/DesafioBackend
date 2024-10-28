@@ -95,7 +95,6 @@ Resposta:
 #### Body (encontrado):
 
 ```json
-
 {
   "nome": "Nome do Usuário",
   "nis": "4340185259"
