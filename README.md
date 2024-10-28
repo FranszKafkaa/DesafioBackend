@@ -95,8 +95,10 @@ Resposta:
 
 ```json
 {
-  "nome": "Nome do Usuário",
-  "nis": "4340185259"
+	"usuario": {
+		"nome": "renan",
+		"nis": "99736555217"
+	}
 }
 ```
 #### Body (não encontrado):
