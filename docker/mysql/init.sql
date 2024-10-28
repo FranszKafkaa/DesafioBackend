@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS desafio;
+USE desafio;
+
+CREATE TABLE IF NOT EXISTS user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    nis VARCHAR(50) NOT NULL
+);
+
+INSERT INTO user (nome, nis) VALUES 
+('teste', '43401852591');

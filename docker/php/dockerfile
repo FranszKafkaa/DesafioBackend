@@ -1,0 +1,30 @@
+FROM php:8.3-apache
+
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+COPY . .
+
+RUN a2enmod rewrite
+
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html \
+    && echo "upload_max_filesize=64M\npost_max_size=64M" > /usr/local/etc/php/conf.d/uploads.ini
+
+RUN composer install
+
+RUN cp .env.example .env
+
+EXPOSE 80
+
+CMD ["php", "-S", "0.0.0.0:80", "-t", "Public"]
