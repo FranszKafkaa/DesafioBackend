@@ -14,7 +14,7 @@ Este projeto é uma API simples escrita em PHP, que permite gerenciar usuários 
 ### 1. Clonar o Repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/FranszKafkaa/DesafioBackend
 cd desafio
 ```
 
@@ -38,7 +38,7 @@ php -S 0.0.0.0:80 -t Public
 ### 1. Clonar o Repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/FranszKafkaa/DesafioBackend
 cd desafio
 ```
 ### 2. Copie o .env.example para um .env

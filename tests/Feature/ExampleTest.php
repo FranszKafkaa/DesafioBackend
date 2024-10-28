@@ -50,7 +50,7 @@ it('deve buscar um usuário com uma requisição GET', function () {
 });
 
 it('deve buscar um usuário não existente', function () {
-    $url = $_ENV['BASE_URL'] . '/usuario/4340185259'; 
+    $url = $_ENV['BASE_URL'] . '/usuario/4340185259';
 
     try {
         $this->client->get($url);
