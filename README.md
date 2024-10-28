@@ -72,7 +72,6 @@ docker-compose exec app vendor/bin/pest
 
 {
     "nome": "Nome do Usuário",
-    "nis": "4340185259"
 }
 ```
 Resposta:
@@ -82,7 +81,7 @@ Resposta:
 ```json
 { 
     "message": "Usuário criado com sucesso!",
-    "nis": "99736555217"
+    "nis": "4340185259"
 }
 ```
 
